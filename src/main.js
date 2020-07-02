@@ -6,7 +6,7 @@ import router from './router'
 import bootstrap from 'bootstrap/dist/css/bootstrap.css'
 
 require('./assets/style/css/style.css')
-
+require('./assets/style/icomoon/style.css')
 
 Vue.config.productionTip = false
 

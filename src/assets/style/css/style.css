@@ -57,6 +57,22 @@ table {
     font-size: 65px;
     margin-top: 140px;
     color: #FFB03B;
+    animation: typings 3.5s steps(30, end), blink-caret .5s step-end infinite;
+}
+@keyframes typings{
+    from {width: 0}
+    to {width: 100%}
+}
+@keyframes blink-caret{
+    from,to {border-color: transparent}
+    50% {border-color: orange}
+}
+.logo-names{
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+}
+@keyframes typing{
+    from {width: 500%}
+    to {width: 100%}
 }
 .sidenav {
     height: 100%;
@@ -106,6 +122,7 @@ table {
     font-family: 'Satisfy', sans-serif;
     font-weight: 300;
 }
+
 .header-p {
     color: #9699a6;
     font-size: 16px;
@@ -144,7 +161,7 @@ table {
 .dark-blue {
     color: #31364c;
     font-size: 24px;
-    margin-top: 0;
+    margin-top: 10;
 }
 .light-blue {
     color: #9699a6;
@@ -244,11 +261,10 @@ table {
     display:block;
 }
 
-.phone-in-talk, .hour-icon
+.icon-phone, .icon-clock
 {
     font-size: 35px;
-    line-height: 70px;
-    color: rgb(255, 255, 255);
+    color: #FFB03B ;
 }
 
 
@@ -257,6 +273,15 @@ table {
     color: #FFB03B;
     font-size: 24px;
 }
+
+.heading i{
+    margin: 10px;
+    color: #ffb03b;
+    font-size: 34px;
+    
+}
+
+
 .marb-35{
     margin-bottom: 35px;
 }
@@ -266,6 +291,7 @@ table {
 .details-list ul li i {
     margin-right: 10px;
     color: #ffb03b;
+    font-size: 25px;
 }
 #about img
 {
@@ -342,6 +368,10 @@ table {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #FFB03B;
+}
+.menu-title i {
+    font-size: 22px;
+    margin-right: 10px;
 }
 .menu-restaurant .menu-line {
     position: absolute;
@@ -439,6 +469,28 @@ table {
     text-transform: uppercase;
     margin: 0 5px;
 }
+
+.win span.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  width: 2px;
+  background-color: #fff;
+  animation: cursorBlink 1s infinite;
+  font-size: 22px;
+}
+
+@keyframes cursorBlink {
+  49% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 980px) {
     .content-holder h2 {
         font-size: 23px;
@@ -464,6 +516,7 @@ table {
     .header-h {
         font-size: 35px;
     }
+    
     .header-p, body{
         font-size: 14px;
     }

@@ -3,25 +3,15 @@
   <!--banner-->
   <section id="banner">
     <div class="bg-color">
-      <header id="header">
-        <div class="container">
-          <div id="mySidenav" class="sidenav">
-            <a href class="closebtn" onclick="closeNav()"></a>
-            <a href="#about">About</a>
-            <a href="#event">Event</a>
-            <a href="#menu-list">Menu</a>
-            <a href="#contact">Book a table</a>
-          </div>
-          <!-- Use any element to open the sidenav -->
-          <span onclick="openNav()" class="pull-right menu-icon"></span>
-        </div>
-      </header>
       <div class="container">
         <div class="row">
           <div class="col-md-offset-3 col-md-12 text-center">
             <h1 class="logo-name">Hi Dear!</h1>
-            <h2>I am a FULLSTACK developer.</h2>
-            <p>Nigerian Based Vue Fullstack Web designer</p>
+            <h2 class="logo-names">I am a FULLSTACK developer.</h2>
+            <p class="win">
+              <span class="typed-text">{{ typeValue }}</span>
+              <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
+            </p>
           </div>
         </div>
       </div>
@@ -33,35 +23,50 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center marb-35">
-          <h1 class="header-h">INTRO</h1>
+          <h1 class="header-h">
+            <i class="icon-home">ABOUT ME!</i>
+          </h1>
           <p class="header-p">
-            My name is Ukpai Ugochi and I'm a Fullstack Developer with expartriate in MEVN stack.
-            I am passionate, hard working and love to design beautiful and functional websites.
-            <br />See below for more information, who knows you might be interested in working with me.
+            My name is Ukpai Ugochi and I'm a Fullstack Developer, i develop with MEVN stack.
+            I am passionate, hard working and love to design beautiful and functional websites, you will be interested in working with me
           </p>
         </div>
         <div class="col-md-1"></div>
         <div class="col-md-10">
-          <div class="col-md-6 col-sm-6">
-            <div class="about-info">
-              <h2 class="heading">WHAT I DO</h2>
-              <p>Developing websites is my passion and main goal.I specialize in MEVN stack (Mongodb, Express.js, Vue.js, Node.js), making your website very responsive with bootstrap-vue. Once in a while, we would need to store and retrieve information to our webpage, mongodb has you covered!</p>
-              <div class="details-list">
-                <ul>
-                  <li>I Transform Brands</li>
-                  <li>I Code Beautiful Websites</li>
-                  <li>I Code Functional And Responsive Websites</li>
-                  <li>I Support And Manage</li>
-                  <li>I am Passionate</li>
-                </ul>
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="about-info">
+                <h2 class="heading">
+                  <i class="icon-html-five"></i>WHAT I DO
+                </h2>
+                <p>Developing websites is my passion and main goal.I specialize in MEVN stack (Mongodb, Express.js, Vue.js, Node.js), making your website very responsive with bootstrap-vue. Once in a while, we would need to store and retrieve information to our webpage, mongodb has you covered!</p>
+                <div class="details-list">
+                  <ul>
+                    <li>
+                      <i class="icon-book"></i>I Transform Brands
+                    </li>
+                    <li>
+                      <i class="icon-brush"></i>I Code Beautiful Websites
+                    </li>
+                    <li>
+                      <i class="icon-meter"></i>I Code Functional And Responsive Websites
+                    </li>
+                    <li>
+                      <i class="icon-person"></i>I Support And Manage
+                    </li>
+                    <li>
+                      <i class="icon-heart"></i>I am Passionate
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
+            <div class="col-md-6 col-sm-6 col-xl-6">
+              <img src="../assets/style/img/res01.jpg" alt class="img-responsive" />
+            </div>
           </div>
-          <div class="col-md-6 col-sm-6 col-xl-6">
-            <img src="../assets/style/img/res01.jpg" alt class="img-responsive" />
-          </div>
+          <div class="col-md-1"></div>
         </div>
-        <div class="col-md-1"></div>
       </div>
     </div>
   </section>
@@ -71,11 +76,11 @@
     <div class="bg-color">
       <div class="container">
         <div class="row">
-          <div class="col-md-offset-3 col-md-12 text-center" style="padding:60px;">
+          <div class="col-md-offset-3 text-center" style="padding:60px;">
             <h1 class="header-h">Completed job</h1>
             <p class="header-p">Decorations 100% responsive</p>
           </div>
-          <div class="col-md-12" style="padding-bottom:60px;">
+          <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12" style="padding-bottom:60px;">
             <div class="item active left">
               <div class="col-md-6 col-sm-6 left-images">
                 <img src="../assets/style/img/res02.jpg" class="img-responsive" />
@@ -91,7 +96,7 @@
                     <strong>Advantage:</strong>
                     VIEWFIED
                   </address>
-                  <a class="btn btn-imfo btn-read-more" href="#">Read more</a>
+                  <a class="btn btn-imfo btn-read-more" href="www.peppubuild.store">Read more</a>
                 </div>
               </div>
             </div>
@@ -108,36 +113,43 @@
         <div class="col-md-12 text-center marb-35">
           <h1 class="header-h">MY OFFER</h1>
           <p class="header-p">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-            <br />nibh euismod tincidunt ut laoreet dolore magna aliquam.
+            MEVN together is the right stack for your business website!
+            <br />It is simply light weight and super-fast. The best scenerio for business brands.
           </p>
         </div>
 
         <div class="col-md-12 text-center" id="menu-flters">
           <ul>
             <li>
-              <a class="filter active" data-filter=".menu-restaurant">MONGODB</a>
+              <a class="filter active">MONGODB</a>
             </li>
             <li>
-              <a class="filter" data-filter=".breakfast" v-on:click="isHidden = true">EXPRESS.JS</a>
+              <a
+                class="filter"
+                v-on:click="isHidden = true, vuee = false, nodee = false, mongo = false"
+              >EXPRESS.JS</a>
             </li>
             <li>
-              <a class="filter" data-filter=".lunch" v-on:click="vuee = true">VUE.JS</a>
+              <a
+                class="filter"
+                v-on:click="vuee = true, nodee = false, isHidden = false, mongo = false"
+              >VUE.JS</a>
             </li>
             <li>
-              <a class="filter" data-filter=".dinner" v-on:click="nodee = true">NODE.JS</a>
+              <a
+                class="filter"
+                v-on:click="nodee = true, vuee = false, isHidden = false, mongo = false"
+              >NODE.JS</a>
             </li>
           </ul>
         </div>
 
         <div id="menu-wrapper">
-          <div class="breakfast menu-restaurant" v-if="!isHidden">
+          <div class="breakfast menu-restaurant" v-if="mongo">
             <span class="clearfix">
-              <a
-                class="menu-title"
-                href="#"
-                data-meal-img="assets/img/restaurant/rib.jpg"
-              >Back-end development</a>
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">
+                <i class="icon-database"></i>Back-end development
+              </a>
               <span style="left: 220px; right: 44px;" class="menu-line"></span>
               <span class="menu-price">MEVN</span>
             </span>
@@ -148,13 +160,11 @@
             </span>
           </div>
 
-          <div class="breakfast menu-restaurant" v-if="!isHidden">
+          <div class="breakfast menu-restaurant" v-if="mongo">
             <span class="clearfix">
-              <a
-                class="menu-title"
-                href="#"
-                data-meal-img="assets/img/restaurant/rib.jpg"
-              >Populate Data</a>
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">
+                <i class="icon-data_usage"></i>Populate Data
+              </a>
               <span style="left: 140px; right: 44px;" class="menu-line"></span>
               <span class="menu-price">MEVN</span>
             </span>
@@ -164,13 +174,13 @@
             </span>
           </div>
 
-          <div class="breakfast menu-restaurant" v-if="!isHidden">
+          <div class="breakfast menu-restaurant" v-if="mongo">
             <span class="clearfix">
               <a
                 class="menu-title"
                 href="#"
                 data-meal-img="assets/img/restaurant/rib.jpg"
-              >Data Count</a>
+              ><i class="icon-code"></i>Data Count</a>
               <span style="left: 105px; right: 44px;" class="menu-line"></span>
               <span class="menu-price">MEVN</span>
             </span>
@@ -186,7 +196,7 @@
                 class="menu-title"
                 href="#"
                 data-meal-img="assets/img/restaurant/rib.jpg"
-              >CORS cross-origin</a>
+              ><i class="icon-infinite"></i> cross-origin</a>
               <span style="left: 182px; right: 44px;" class="menu-line"></span>
               <span class="menu-price">MEVN</span>
             </span>
@@ -197,24 +207,20 @@
 
           <div class="lunch menu-restaurant" v-if="isHidden">
             <span class="clearfix">
-              <a
-                class="menu-title"
-                href="#"
-                data-meal-img="assets/img/restaurant/rib.jpg"
-              >Dependencies</a>
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">
+                <i class="icon-hourglass_full"></i>Framework
+              </a>
               <span style="left: 132px; right: 44px;" class="menu-line"></span>
               <span class="menu-price">MEVN</span>
             </span>
-            <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+            <span class="menu-subtitle">Express js is a framework with minimal structure, it has a solid outline</span>
           </div>
 
           <div class="lunch menu-restaurant" v-if="vuee">
             <span class="clearfix">
-              <a
-                class="menu-title"
-                href="#"
-                data-meal-img="assets/img/restaurant/rib.jpg"
-              >Data Binding</a>
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">
+                <i class="icon-queue"></i>Data Binding
+              </a>
               <span style="left: 120px; right: 44px;" class="menu-line"></span>
               <span class="menu-price">MEVN</span>
             </span>
@@ -225,7 +231,9 @@
 
           <div class="lunch menu-restaurant" v-if="vuee">
             <span class="clearfix">
-              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">SPA</a>
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">
+                <i class="icon-page-break"></i>SPA
+              </a>
               <span style="left: 35px; right: 44px;" class="menu-line"></span>
               <span class="menu-price">MEVN</span>
             </span>
@@ -237,11 +245,9 @@
 
           <div class="lunch menu-restaurant" v-if="vuee">
             <span class="clearfix">
-              <a
-                class="menu-title"
-                href="#"
-                data-meal-img="assets/img/restaurant/rib.jpg"
-              >Inheritance</a>
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">
+                <i class="icon-pushpin"></i>Inheritance
+              </a>
               <span style="left: 115px; right: 44px;" class="menu-line"></span>
               <span class="menu-price">MEVN</span>
             </span>
@@ -253,11 +259,9 @@
 
           <div class="lunch menu-restaurant" v-if="vuee">
             <span class="clearfix">
-              <a
-                class="menu-title"
-                href="#"
-                data-meal-img="assets/img/restaurant/rib.jpg"
-              >Vuex store</a>
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">
+                <i class="icon-store_mall_directory"></i>Vuex store
+              </a>
               <span style="left: 110px; right: 44px;" class="menu-line"></span>
               <span class="menu-price">MEVN</span>
             </span>
@@ -270,33 +274,35 @@
 
           <div class="dinner menu-restaurant" v-if="nodee">
             <span class="clearfix">
-              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Modules</a>
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">
+                <i class="icon-infinite"></i>Modules
+              </a>
               <span style="left: 80px; right: 44px;" class="menu-line"></span>
               <span class="menu-price">MEVN</span>
             </span>
-            <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+            <span class="menu-subtitle">Node js modules is equiped with a functional javascript library. Node is asychronous</span>
           </div>
 
           <div class="dinner menu-restaurant" v-if="nodee">
             <span class="clearfix">
-              <a
-                class="menu-title"
-                href="#"
-                data-meal-img="assets/img/restaurant/rib.jpg"
-              >Dependencies</a>
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">
+                <i class="icon-hourglass_empty"></i>Dependencies
+              </a>
               <span style="left: 130px; right: 44px;" class="menu-line"></span>
               <span class="menu-price">MEVN</span>
             </span>
-            <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+            <span class="menu-subtitle">Development and production dependencies can be managed and locked with package.json</span>
           </div>
 
           <div class="dinner menu-restaurant" v-if="nodee">
             <span class="clearfix">
-              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Build</a>
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">
+                <i class="icon-build"></i>Build
+              </a>
               <span style="left: 49px; right: 44px;" class="menu-line"></span>
               <span class="menu-price">MEVN</span>
             </span>
-            <span class="menu-subtitle">Neque porro quisquam est qui dolorem</span>
+            <span class="menu-subtitle">Build environment and configuration has never been easier with Node js</span>
           </div>
         </div>
       </div>
@@ -319,22 +325,19 @@
         <div class="col-md-4 col-sm-4 mr-15">
           <div class="media-2">
             <div class="media-left">
-              <div class="contact-phone bg-1 text-center">
-                <span class="phone-in-talk fa fa-phone"></span>
+              <div class>
+                <i class="icon-phone"></i>
               </div>
             </div>
             <div class="media-body">
               <h4 class="dark-blue regular">Phone Numbers</h4>
-              <p class="light-blue regular alt-p">
-                +440 875369208 -
-                <span class="contacts-sp">Phone Booking</span>
-              </p>
+              <p class="light-blue regular alt-p">+234 801 1620 029</p>
             </div>
           </div>
           <div class="media-2">
             <div class="media-left">
-              <div class="contact-email bg-14 text-center">
-                <span class="hour-icon fa fa-clock-o"></span>
+              <div class>
+                <span class="icon-clock"></span>
               </div>
             </div>
             <div class="media-body">
@@ -440,17 +443,20 @@
               <br />Rivers, Nigeria
             </address>
             <div class="social-list">
-              <a href="#">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
+              <a href="mailto:peppubuild@gmail.com">
+                <i class="icon-mail" aria-hidden="true"></i>
               </a>
-              <a href="#">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
+              <a href="www.facebook.com/ugochi ukpai-ibem">
+                <i class="icon-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="https://wa.me/+2348011620029">
+                <i class="icon-whatsapp" aria-hidden="true"></i>
               </a>
             </div>
             <p class="copyright clear-float">© PeppuBuild. All Rights Reserved</p>
             <div class="credits">
               Designed by
-              <a href="#">PeppuBuild</a>
+              <a href="www.peppubuild.store">PeppuBuild</a>
             </div>
           </div>
         </div>
@@ -461,14 +467,67 @@
 </template>
 
 <script>
+import { setTimeout } from "timers";
 export default {
-  data(){
-    return{
+  data() {
+    return {
       isHidden: false,
       vuee: false,
-      nodee: false
+      nodee: false,
+      mongo: true,
+      typeValue: "",
+      typeStatus: false,
+      typeArray: [
+        "......Nigeria based web designer......",
+        "Coding is fun!",
+        "Coding is life!",
+        "Javascript is lovely with vue js."
+      ],
+      typingSpeed: 200,
+      erasingSpeed: 100,
+      newTextDelay: 2000,
+      typeArrayIndex: 0,
+      charIndex: 0
+    };
+  },
+  methods: {
+    typeText() {
+      if (this.charIndex < this.typeArray[this.typeArrayIndex].length) {
+        if (!this.typeStatus) this.typeStatus = true;
+
+        this.typeValue += this.typeArray[this.typeArrayIndex].charAt(
+          this.charIndex
+        );
+        this.charIndex += 1;
+
+        setTimeout(this.typeText, this.typingSpeed);
+      } else {
+        this.typeStatus = false;
+        setTimeout(this.eraseText, this.newTextDelay);
+      }
+    },
+    eraseText() {
+      if (this.charIndex > 0) {
+        if (!this.typeStatus) this.typeStatus = true;
+
+        this.typeValue = this.typeArray[this.typeArrayIndex].substring(
+          0,
+          this.charIndex - 1
+        );
+        this.charIndex -= 1;
+        setTimeout(this.eraseText, this.erasingSpeed);
+      } else {
+        this.typeStatus = false;
+        this.typeArrayIndex += 1;
+        if (this.typeArrayIndex >= this.typeArray.length)
+          this.typeArrayIndex = 0;
+
+        setTimeout(this.typeText, this.typingSpeed + 1000);
+      }
     }
   },
-  methods: {}
+  created() {
+    setTimeout(this.typeText, this.newTextDelay + 200);
+  }
 };
 </script>
